@@ -1,4 +1,4 @@
-FROM souravkl11/raganork:test
+FROM fusuf/whatsasena:latest
 
 RUN git clone https://github.com/Dark-Max-Alpha/v5-new
 WORKDIR /v5-new
