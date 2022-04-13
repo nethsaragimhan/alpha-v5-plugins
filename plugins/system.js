@@ -10,17 +10,17 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-const Owner = `\n\n\n 👨‍💻 OWNER NUMBER ->  https://bit.ly/3OavDEg`
+const Owner = `\n\n\n ->  https://bit.ly/3OavDEg`
 
-const git  = `\n\n\n 🖥️ GITHUB LINK ->  https://bit.ly/3KRtfjC`
+const git  = `\n\n\n ->  https://bit.ly/3KRtfjC`
 
-const web = `\n\n\n 🌐 WEBSITE LINK ->  https://bit.ly/3xmcp8H`
+const web = `\n\n\n  ->  https://bit.ly/3xmcp8H`
 
-const error = `\n\n\n ❇️ ERROR FIX WEBSITE ->  https://bit.ly/3EoP0Fr`
+const error = `\n\n\n ->  https://bit.ly/3EoP0Fr`
 
-const yt = `\n\n\n 📽️ YOUTUBE LINK ->  https://bit.ly/38PtIVF`
+const yt = `\n\n\n ->  https://bit.ly/38PtIVF`
 
-const all = `\n\n\n ㊙️ ALL SOCIAL LINK ->  https://bit.ly/3M10jG9`
+const all = `\n\n\n  ->  https://bit.ly/3M10jG9`
 
 
 if (Config.WORKTYPE == 'private') {
