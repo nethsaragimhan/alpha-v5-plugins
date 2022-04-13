@@ -38,10 +38,10 @@ if (Config.WORKTYPE == 'private') {
             const buttons = [
   {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
   {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},            
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},            
  ]
 
 const btn = {
@@ -69,10 +69,10 @@ const btn = {
         const buttons = [
   {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
   {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},      
   ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
@@ -134,10 +134,10 @@ else if (Config.WORKTYPE == 'public') {
             const buttons = [
   {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
   {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},        
  ]
 
 const btn = {
@@ -175,10 +175,10 @@ const btn = {
         const buttons = [
   {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
   {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},     
   ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
