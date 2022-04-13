@@ -10,17 +10,17 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-const Owner = `\n\n\n ->  https://bit.ly/3OavDEg`
+const LINK = `\n\n\n ->  🖥️ GITHUB LINK ->  https://bit.ly/3KRtfjC
+📽️ YOUTUBE LINK -> https://bit.ly/38PtIVF
+🌐 WEBSITE LINK -> https://bit.ly/3xmcp8H
+❇️ ERROR FIX WEBSITE -> https://bit.ly/3EoP0Fr
+👨‍💻 ACHI FERNANDO -> https://bit.ly/3OavDEg
+㊙️ ALL SOCIAL LINK -> https://bit.ly/3M10jG9`
 
-const git  = `\n\n\n ->  https://bit.ly/3KRtfjC`
+const git  = `\n\n\n ->`
 
-const web = `\n\n\n  ->  https://bit.ly/3xmcp8H`
+const web = `\n\n\n  ->`
 
-const error = `\n\n\n ->  https://bit.ly/3EoP0Fr`
-
-const yt = `\n\n\n ->  https://bit.ly/38PtIVF`
-
-const all = `\n\n\n  ->  https://bit.ly/3M10jG9`
 
 
 if (Config.WORKTYPE == 'private') {
@@ -36,12 +36,9 @@ if (Config.WORKTYPE == 'private') {
 
             
             const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},            
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 BOT ALL LINKS'+LINK}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️'+git}, type: 1},
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐'+web}, type: 1},         
  ]
 
 const btn = {
@@ -67,13 +64,10 @@ const btn = {
     const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
 
         const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},      
-  ]
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 BOT ALL LINKS'+LINK}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️'+git}, type: 1},
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐'+web}, type: 1},  
+ ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
     contentText: Config.ALIVEMSG + "\n\n WHAT IS YOUR AMBITION 😎⚜️",
@@ -132,12 +126,9 @@ else if (Config.WORKTYPE == 'public') {
 
             
             const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},        
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 BOT ALL LINKS'+LINK}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️'+git}, type: 1},
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐'+web}, type: 1},         
  ]
 
 const btn = {
@@ -173,12 +164,9 @@ const btn = {
 
 
         const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
-  {buttonId: 'MEHk', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
-  {buttonId: 'MEHm', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
-  {buttonId: 'MEHl', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
-  {buttonId: 'MEHo', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},     
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 BOT ALL LINKS'+LINK}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️'+git}, type: 1},
+  {buttonId: 'MEHk', buttonText: {displayText: '🌐'+web}, type: 1},      
   ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
