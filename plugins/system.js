@@ -10,13 +10,18 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-const hacker = `\n\n\n A hacker is a person skilled in information technology who uses their technical knowledge to achieve a goal or overcome an obstacle, within a computerized system by non-standard means. Though the term hacker has become associated in popular culture with a security hacker – someone who utilizes their technical know-how of bugs or exploits to break into computer systems and access data which would otherwise be unavailable to them – hacking can also be utilized by legitimate figures in legal situations. For example, law enforcement agencies sometimes use hacking techniques in order to collect evidence on criminals and other malicious actors. This could include using anonymity tools (such as a VPN, or the dark web) to mask their identities online, posing as criminals themselves.[1][2] Likewise, covert world agencies can employ hacking techniques in the legal conduct of their work. Oppositely, hacking and cyber-attacks are used extra- and illegally by law enforcement and security agencies (conducting warrantless activities), and employed by State actors as a weapon of both legal and illegal warfare.😎`
+const Owner = `👨‍💻 OWNER NUMBER ->  https://bit.ly/3OavDEg`
 
-const programmer  = `\n\n\nA computer programmer, sometimes called a software developer, a programmer or more recently a coder (especially in more informal contexts), is a person who creates computer software. The term computer programmer can refer to a specialist in one area of computers or to a generalist who writes computer programs.
+const git  = `🖥️ GITHUB LINK ->  https://bit.ly/3KRtfjC`
 
-A programmer's most often-used computer language (e.g., Assembly, C, C++, C#, JavaScript, Lisp, Python, Java) may be prefixed to the term programmer. Some who work with web programming languages also prefix their titles with web.😎`
+const web = `🌐 WEBSITE LINK ->  https://bit.ly/3xmcp8H`
 
-const other = `\n\n\nSELECT YOUR FAVOURITE AMBITION 😎♥️`
+const error = `❇️ ERROR FIX WEBSITE ->  https://bit.ly/3EoP0Fr`
+
+const yt = `📽️ YOUTUBE LINK ->  https://bit.ly/38PtIVF`
+
+const all = `㊙️ ALL SOCIAL LINK ->  https://bit.ly/3M10jG9`
+
 
 if (Config.WORKTYPE == 'private') {
 
@@ -31,14 +36,17 @@ if (Config.WORKTYPE == 'private') {
 
             
             const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '😈 HACKER ⚜️'+hacker}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '⚕️ PROGRAMMER 😎'+programmer}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '⚕️ OTHER 😌'+other}, type: 1},
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},            
  ]
 
 const btn = {
-    contentText: "  ```Hey There! I'm Online now. ⚜️```\n\n⚕️ My name : ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️\n\n ⚜️ Developer: HIRUWA\n\n⚜️ Thank You For Using ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️\n\n WHAT IS YOUR AMBITION 😎",
-    footerText: 'BY ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️ ▷',
+    contentText: "\nHey There! I'm Online now. 🎭\n\n\n🎭 My name :  🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭\n\n🇱🇰🎭  Developer: ACHIYA\n\n\n\n🇱🇰🎭 Thank You For Using 🇱🇰🎭\n",
+    footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
     headerType: 4,
     imageMessage: media.message.imageMessage
@@ -59,14 +67,17 @@ const btn = {
     const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
 
         const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '😈 HACKER ⚜️'+hacker}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '⚕️ PROGRAMMER 😎'+programmer}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '⚕️ OTHER 😌'+other}, type: 1},
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
   ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
     contentText: Config.ALIVEMSG + "\n\n WHAT IS YOUR AMBITION 😎⚜️",
-    footerText: 'BY ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️ ▷',
+    footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
     headerType: 4,
     imageMessage: media.message.imageMessage
@@ -99,10 +110,10 @@ const btn = {
     Trex.addrex({pattern: 'version', fromMe: true,  deleteCommand: false,  desc: Lang.BOT_V}, (async (message, match) => {    
     
         await message.client.sendMessage(message.jid, 
-                `*⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️*\n\n` + 
+                `*🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭*\n\n` + 
                 '```Installed version :```\n' +
-                ' V 1.0.0 Public'+
-                `\n\n🍁 Check github for bot: `
+                ' V 5.0.0 Public'+
+                `\n\n Check github for bot: `
            , MessageType.text);
             
         }));
@@ -121,15 +132,18 @@ else if (Config.WORKTYPE == 'public') {
 
             
             const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '😈 HACKER ⚜️'+hacker}, type: 1},//jakakkak
-  {buttonId: 'MNU', buttonText: {displayText: '⚕️ PROGRAMMER 😎'+programmer}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '⚕️ OTHER 😌'+other}, type: 1},
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
  ]
 
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd35928cef2be17d339c1.jpg',
-    contentText: "```Hey There! I'm Online now. ⚜️```\n\n⚕️ My name : ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️\n\n ⚜️ Developer: HIRUWA\n\n⚜️ Thank You For Using ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️\n\n  WHAT IS YOUR AMBITION 😎⚜️",
-    footerText: 'BY ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️ ▷',
+    contentText: "\nHey There! I'm Online now. 🎭\n\n\n🎭 My name :  🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭\n\n🇱🇰🎭  Developer: ACHIYA\n\n\n\n🇱🇰🎭 Thank You For Using 🇱🇰🎭\n",
+    footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
     headerType: 4,
     imageMessage: media.message.imageMessage
@@ -144,7 +158,7 @@ const btn = {
         await new Promise(r => setTimeout(r, 1000));
 
  
-      //  await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "```Hey There! I'm Online now. ⚜️```\n\n⚕️ My name : ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️\n\n ⚜️ Developer: HIRUWA\n\n⚜️ Thank You For Using ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️"})
+      //  await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "\nHey There! I'm Online now. 🎭\n\n\n🎭 My name :  🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭\n\n🇱🇰🎭  Developer: ACHIYA\n\n\n\n🇱🇰🎭 Thank You For Using 🇱🇰🎭\n"})
             
         await message.client.sendMessage (message.jid, btn, MessageType.buttonsMessage)
 
@@ -159,14 +173,17 @@ const btn = {
 
 
         const buttons = [
-  {buttonId: 'MENU', buttonText: {displayText: '😈 HACKER ⚜️'+hacker}, type: 1},//jakakkak
-  {buttonId: 'MEN', buttonText: {displayText: '⚕️ PROGRAMMER 😎'+programmer}, type: 1},
-  {buttonId: 'MEHN', buttonText: {displayText: '⚕️ OTHER 😌'+other}, type: 1},
+  {buttonId: 'MENU', buttonText: {displayText: '👨‍💻 OWNER NUMBER'+Owner}, type: 1},//jakakkak
+  {buttonId: 'MNU', buttonText: {displayText: '🖥️ GITHUB LINK'+git}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '🌐 WEBSITE LINK'+web}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '❇️ ERROR FIX WEBSITE'+error}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '📽️ YOUTUBE LINK'+yt}, type: 1},
+  {buttonId: 'MEHN', buttonText: {displayText: '㊙️ ALL SOCIAL LINK'+all}, type: 1},    
   ]
 const btn = {
    // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
     contentText:  Config.ALIVEMSG + "\n\n\nWHAT IS YOUR AMBITION 😎⚜️",
-    footerText: 'BY ⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️▷',
+    footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
     headerType: 4,
     imageMessage: media.message.imageMessage
@@ -183,7 +200,7 @@ const btn = {
         await new Promise(r => setTimeout(r, 1000));
 
  
-        //await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️*' })
+        //await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: Config.ALIVEMSG + '\n\n*🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭*' })
         await message.client.sendMessage (message.jid, btn, MessageType.buttonsMessage)
 
      }
@@ -205,10 +222,10 @@ const btn = {
     Trex.addrex({pattern: 'version', fromMe: false, desc: Lang.BOT_V}, (async (message, match) => {    
     
         await message.client.sendMessage(message.jid, 
-                `*⚕️🎭⚜️ Anonymous Bot ⚜️🎭⚕️*\n\n` + 
+                `*🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭*\n\n` + 
                 '```Installed version :```\n' +
-                ' V 1.0.0 - Public'+
-                `\n\n🍁 Check github for bot:  `
+                ' V 5.0.0 - Public'+
+                `\n\n Check github for bot:  `
            , MessageType.text);
             
         }));
