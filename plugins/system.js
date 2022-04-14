@@ -18,8 +18,7 @@ const link = `\n\n\n\n🖥️ GITHUB LINK            ->  https://bit.ly/3KRtfjC
 
 const Owner  = `\n\n\n\n👨‍💻 ACHI FERNANDO -> https://bit.ly/3OavDEg`
 
-const about = `\n\n\n\n 
-                 🎭 Developer             : Achi  Fernando
+const about = `\n\n\n\n🎭 Developer             : Achi  Fernando
 🎭 Bot                        : 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭  WhatsApp User Bot v5.0.0
 🎭 Language              : Sinhala & English
 🎭 Sponcer Team       : PEARL TEAM SRI LANKA
