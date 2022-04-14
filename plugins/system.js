@@ -10,20 +10,20 @@ const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
-const link = `\n\n\n\n\n 🖥️ GITHUB LINK ->  https://bit.ly/3KRtfjC
-                        🌐 WEBSITE LINK -> https://bit.ly/3xmcp8H
-                   ❇️ ERROR FIX WEBSITE -> https://bit.ly/3EoP0Fr
-                        📽️ YOUTUBE LINK -> https://bit.ly/38PtIVF
-                     ㊙️ ALL SOCIAL LINK -> https://bit.ly/3M10jG9`
+const link = `\n\n\n\n🖥️ GITHUB LINK            ->  https://bit.ly/3KRtfjC
+🌐 WEBSITE LINK           -> https://bit.ly/3xmcp8H
+❇️ ERROR FIX WEBSITE -> https://bit.ly/3EoP0Fr
+📽️ YOUTUBE LINK         -> https://bit.ly/38PtIVF
+㊙️ ALL SOCIAL LINK      -> https://bit.ly/3M10jG9`
 
-const Owner  = `\n\n\n\n\n 👨‍💻 ACHI FERNANDO -> https://bit.ly/3OavDEg`
+const Owner  = `\n\n\n\n👨‍💻 ACHI FERNANDO -> https://bit.ly/3OavDEg`
 
-const about = `\n\n\n\n\n 
-                 🎭 Developer        : Achi  Fernando
-                 🎭 Bot              : 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WhatsApp User Bot v5.0.0
-                 🎭 Language         : Sinhala & English
-                 🎭 Sponcer Team     : PEARL TEAM SRI LANKA
-                 🎭 Develop language : Node js `
+const about = `\n\n\n\n 
+                 🎭 Developer             : Achi  Fernando
+🎭 Bot                        : 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭  WhatsApp User Bot v5.0.0
+🎭 Language              : Sinhala & English
+🎭 Sponcer Team       : PEARL TEAM SRI LANKA
+🎭 Develop language : Node js`
 
 
 
