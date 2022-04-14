@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
         if (Config.ALIVEMSG == 'default') {
         
-        var logo = await axios.get (`https://telegra.ph/file/d85f2c2806053601295e9.jpg`, { responseType: 'arraybuffer' })
+        var logo = await axios.get (`https://telegra.ph/file/f3b0b4e681583334b7330.jpg`, { responseType: 'arraybuffer' })
     var PIC = Buffer.from(logo.data)
 
     const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
@@ -72,7 +72,7 @@ const btn = {
   {buttonId: 'MEHk', buttonText: {displayText: 'BOT ABOUT'+about}, type: 1},  
  ]
 const btn = {
-   // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
+   // imageMessage: 'https://telegra.ph/file/f3b0b4e681583334b7330.jpg',
     contentText: Config.ALIVEMSG + "\n\n",
     footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
@@ -122,7 +122,7 @@ else if (Config.WORKTYPE == 'public') {
         if (Config.ALIVEMSG == 'default') {
         
         
-        var logo = await axios.get (`https://telegra.ph/file/d85f2c2806053601295e9.jpg`, { responseType: 'arraybuffer' })
+        var logo = await axios.get (`https://telegra.ph/file/f3b0b4e681583334b7330.jpg`, { responseType: 'arraybuffer' })
     var PIC = Buffer.from(logo.data)
 
     const media = await message.client.prepareMessage(message.jid, PIC, MessageType.image, { thumbnail: PIC })
@@ -135,7 +135,7 @@ else if (Config.WORKTYPE == 'public') {
  ]
 
 const btn = {
-   // imageMessage: 'https://telegra.ph/file/cd35928cef2be17d339c1.jpg',
+   // imageMessage: 'https://telegra.ph/file/f3b0b4e681583334b7330.jpg',
     contentText: "\nHey There! I'm Online now. 🎭\n\n\n🎭 My name :  🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭\n\n\n\n🇱🇰🎭 Thank You For Using 🇱🇰🎭\n",
     footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
@@ -144,7 +144,7 @@ const btn = {
 }
 
             
-            var image = await axios.get ('https://telegra.ph/file/cd6032c65c27e0510ddad.jpg', {responseType: 'arraybuffer'})
+            var image = await axios.get ('https://telegra.ph/file/f3b0b4e681583334b7330.jpg', {responseType: 'arraybuffer'})
        
 
        await message.client.updatePresence(message.jid,Presence.composing)
@@ -172,7 +172,7 @@ const btn = {
   {buttonId: 'MEHk', buttonText: {displayText: 'BOT ABOUT'+about}, type: 1},     
   ]
 const btn = {
-   // imageMessage: 'https://telegra.ph/file/cd6032c65c27e0510ddad.jpg',
+   // imageMessage: 'https://telegra.ph/file/f3b0b4e681583334b7330.jpg',
     contentText:  Config.ALIVEMSG + "\n\n\n",
     footerText: 'BY 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭▷',
     buttons: buttons,
