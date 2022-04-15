@@ -39,7 +39,7 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 
     
 
-Nima.addrex({ pattern: 'round ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'round', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
     const link = await axios.get('https://leyscoders-api.herokuapp.com/api/img/circle?url=${encodeURIComponent' + match[1] + '&apikey=dappakntlll')
     const img = await axios.get(link.data.url , { responseType: 'arraybuffer'})
@@ -50,7 +50,7 @@ Nima.addrex({ pattern: 'round ?(.*)', fromMe: wk,  dontaddrexList: true, deleteC
 
 
 
-Nima.addrex({ pattern: 'light ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'light', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -64,7 +64,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'neon ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'neon', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -79,7 +79,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'gneon ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'gneon', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -92,7 +92,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'glow ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'glow', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -105,7 +105,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'firework ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'firework', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -118,7 +118,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'led ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'led', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -130,7 +130,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'grafiti ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'grafiti', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -147,7 +147,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'future ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'future', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -160,7 +160,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'smetal ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'smetal', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -174,7 +174,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'anciant ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'anciant', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -187,7 +187,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'clout ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'clout', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -201,7 +201,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'matrix ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'matrix', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
@@ -213,7 +213,7 @@ if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන
 
 
 
-Nima.addrex({ pattern: 'pencil ?(.*)', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
+Nima.addrex({ pattern: 'pencil', fromMe: wk,  dontaddrexList: true, deleteCommand: false }, async (message, match) => {
   
 if (!match[1]) return await message.client.sendMessage(message.jid,'කමාන්ඩ් එකට පසු ඔබේ  වචනය යොදන්න !', MessageType.text, { quoted: message.data });
   
