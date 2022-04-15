@@ -125,7 +125,7 @@ ${chalk.blue.italic('🎭🇱🇰 Connecting to WhatsApp...▶')}`);
         });
         
         console.log(
-            chalk.blueBright.italic('🎭🇱🇰 Installing plugins...')
+            chalk.blueBright.italic('🎭🇱🇰 Installing plugins... \n\n 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WHATSAPP BOT WORKING!▷ \n\n 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WhatsApp User Bot v5.0.0 \n\n')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -133,6 +133,7 @@ ${chalk.blue.italic('🎭🇱🇰 Connecting to WhatsApp...▶')}`);
                 require('./plugins/' + plugin);
             }
         });
+        
         console.log(
             chalk.green.bold(' 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WHATSAPP BOT WORKING!▷')
        );
