@@ -6,8 +6,8 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('Trex');
 const YTV_DESC = "❤❤"
-const YT_NEED = "*Need Song Yt Link!.*"
-const NO_RESULT = "*🖲️can't Find Anything...* Use Yt Link only ..."
+const YT_NEED = "Need Song Yt Link!."
+const NO_RESULT = "🌀can't Find Anything... Use Yt Link only ..."
 const tk = Config.WORKTYPE == 'public' ? false : true
 
     Trex.addrex({ pattern: 'vid2 ?(.*)', fromMe: false, deleteCommand: false, desc: "hin",  deleteCommand: false}, async (message, match) => {
@@ -15,12 +15,12 @@ const tk = Config.WORKTYPE == 'public' ? false : true
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
         await message.client.sendMessage(message.jid,Config.VD,MessageType.text);
         await axios
-          .get(`https://rei-api.herokuapp.com/api/dl/ytavv2?url=${linkk}`)
+          .get(`https://anonyapi.herokuapp.com/api/yutub/video?url=${linkk}&apikey=hiruwa`)
           .then(async (response) => {
             const {
-              link,
+              result,
             } = response.data.result
-            const videoBuffer = await axios.get(link, {responseType: 'arraybuffer'})
+            const videoBuffer = await axios.get(result, {responseType: 'arraybuffer'})
             await message.client.sendMessage(message.jid,Config.VU,MessageType.text);
             await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {mimetype: Mimetype.mp4, ptt: false,quoted: message.data  })
         })
