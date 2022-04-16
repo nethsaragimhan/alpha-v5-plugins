@@ -40,11 +40,11 @@ if (config.WORKTYPE == 'private') {
     
 Trex.addrex({pattern: 'play ?(.*)', fromMe: true, desc: Lang.PLAY_DESC}, (async (message, match) => { 
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,'NEED WORD 🍁',MessageType.text);
+        if (match[1] === '') return await message.client.sendMessage(message.jid,'NEED WORD 🎭',MessageType.text);
         let arama = await yts(match[1]);
         arama = arama.all;
         if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,`🖲️.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,`🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text);
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
@@ -66,45 +66,10 @@ Trex.addrex({pattern: 'play ?(.*)', fromMe: true, desc: Lang.PLAY_DESC}, (async 
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' ```\n\n'+`🖲️.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`+'\n' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' ```\n\n'+`🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`+'\n' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1, isForwarded: false }});
             });
     }));
-    
-    Trex.addrex({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,config.SD ,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-                reply = await message.client.sendMessage(message.jid,config.SU ,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
-            });
-    }));
-    
-    
     
          
     Trex.addrex({pattern: 'fsong ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
@@ -113,7 +78,7 @@ Trex.addrex({pattern: 'play ?(.*)', fromMe: true, desc: Lang.PLAY_DESC}, (async 
         let arama = await yts(match[1]);
         arama = arama.all;
         if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,`🖲️.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`,MessageType.text);
+        var reply = await message.client.sendMessage(message.jid,`🎭.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`,MessageType.text);
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
@@ -135,41 +100,12 @@ Trex.addrex({pattern: 'play ?(.*)', fromMe: true, desc: Lang.PLAY_DESC}, (async 
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,`🖲️.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text);
+                reply = await message.client.sendMessage(message.jid,`🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text);
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg'});
             });
     }));
   
-      
      
-Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
-    
-        var VID = '';
-        try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
-        } catch {
-            return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        }
-        var reply = await message.client.sendMessage(message.jid,config.VD,MessageType.text);
-
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
-
-        yt.on('end', async () => {
-            reply = await message.client.sendMessage(message.jid,config.VU,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
-        });
-    }));
-    
-        
     
     Trex.addrex({ pattern: 'insta ?(.*)', fromMe: true,  deleteCommand: false, desc: Lang.IG_DESC}, (async (message, match) => {
 
@@ -194,7 +130,7 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
       if (msg === '200') {
         await message.client.sendMessage(message.jid,Lang.DL_VID,MessageType.text);
         await message.client.sendMessage(message.jid,Lang.UP_VID,MessageType.text);
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "⎝🛡️ ALPHA 🛡️⎠ "}) 
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "🎭🇱🇰𝙰𝙻𝙿𝙷𝙰🇱🇰🎭  "}) 
         }
           })
           .catch(
@@ -225,7 +161,7 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
       if (msg === '200') {
         await message.client.sendMessage(message.jid,Lang.DL_VID,MessageType.text);
         await message.client.sendMessage(message.jid,Lang.UP_VID,MessageType.text);
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "⎝🛡️ ALPHA 🛡️⎠ "}) 
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "🎭🇱🇰𝙰𝙻𝙿𝙷𝙰🇱🇰🎭  "}) 
         }
           })
           .catch(
@@ -246,9 +182,9 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
 
         ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
         if ('text' in ceviri) {
-            return await message.reply('*🍁 ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-            + '*🔱 ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
-            + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
+            return await message.reply('*🎭 ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+            + '*🎭 ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+            + '*🎭 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
         } else {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
@@ -345,7 +281,7 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '🍁 *' + video.title + '* - ' + video.url + '\n\n'
+            mesaj += '🎭 *' + video.title + '* - ' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
@@ -370,7 +306,7 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
         await reply.delete();
     }));
 
-    Trex.addrex({pattern: 'img ?(.*)', fromMe: true, desc: '❤'}, (async (message, match) => { 
+    Trex.addrex({pattern: 'img ?(.*)', fromMe: true, desc: '🎭'}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
@@ -395,7 +331,7 @@ Trex.addrex({pattern: 'video ?(.*)', fromMe: true, desc: 'hu'}, (async (message,
             const response = await got(url);
             const json = JSON.parse(response.body);
             if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*➢  ' + Lang.QUOTE +'* ```' + json.content + '```\n\n' +
-            '*🍁' + Lang.AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
+            '*🎭' + Lang.AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
         } catch {
             return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDA, MessageType.text);
         }
@@ -511,11 +447,11 @@ else if (config.WORKTYPE == 'public') {
     
     Trex.addrex({pattern: 'play ?(.*)', fromMe: false, desc: Lang.PLAY_DESC}, (async (message, match) => { 
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,'NEED WORD 🍁',MessageType.text, {quoted: message.data});
+        if (match[1] === '') return await message.client.sendMessage(message.jid,'NEED WORD 🎭',MessageType.text, {quoted: message.data});
         let arama = await yts(match[1]);
         arama = arama.all;
         if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text, {quoted: message.data});
-        var reply = await message.client.sendMessage(message.jid,`╭🖲️.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text, {quoted: message.data});
+        var reply = await message.client.sendMessage(message.jid,`╭🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text, {quoted: message.data});
 
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
@@ -537,45 +473,10 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' ```\n\n'+`🖲️.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`+'\n' });
+                reply = await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.jpg'), MessageType.image, { caption: '\n```Song Name :\n'+ title +' ```\n\n'+`🎭.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`+'\n' });
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 1, isForwarded: false }, quoted: message.data});
             });
     }));
-    
-    Trex.addrex({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,config.SD,MessageType.text);
-
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
-        });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
-
-                reply = await message.client.sendMessage(message.jid,config.SU ,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, quoted: message.data, ptt: false});
-            });
-    }));
-    
-    
 	
     Trex.addrex({ pattern: 'fsong ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => {
 
@@ -583,7 +484,7 @@ else if (config.WORKTYPE == 'public') {
         let arama = await yts(match[1]);
         arama = arama.all;
         if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text, {quoted: message.data});
-        var reply = await message.client.sendMessage(message.jid,`🖲️.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text, {quoted: message.data});
+        var reply = await message.client.sendMessage(message.jid,`🎭.  *ඔබ සෙවූ ගීතය ඔබ වෙත එවමින් ඇත....*`,MessageType.text, {quoted: message.data});
   
         let title = arama[0].title.replace(' ', '+');
         let stream = ytdl(arama[0].videoId, {
@@ -605,40 +506,11 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
   
-                reply = await message.client.sendMessage(message.jid,`🖲️.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`,MessageType.text, {quoted: message.data});
+                reply = await message.client.sendMessage(message.jid,`🎭.  *ඔබ සෙවූ ගීතය බාගත කරමින් ඇත....*`,MessageType.text, {quoted: message.data});
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg'});
             });
     }));
   
-      
-	Trex.addrex({pattern: 'video ?(.*)', fromMe: false, desc: 'hu'}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
-    
-        var VID = '';
-        try {
-            if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } else {     
-                VID = match[1].split('/')[3]
-            }
-        } catch {
-            return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        }
-        var reply = await message.client.sendMessage(message.jid,config.VD,MessageType.text);
-
-        var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
-
-        yt.on('end', async () => {
-            reply = await message.client.sendMessage(message.jid,config.VU,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
-        });
-    }));
-	
-        
 	
 
     Trex.addrex({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.IG_DESC}, (async (message, match) => {
@@ -664,7 +536,7 @@ else if (config.WORKTYPE == 'public') {
       if (msg === '200') {
         await message.client.sendMessage(message.jid,Lang.DL_VID,MessageType.text, {quoted: message.data});
         await message.client.sendMessage(message.jid,Lang.UP_VID,MessageType.text, {quoted: message.data});
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {quoted: message.data}, {caption: "⎝🛡️ ALPHA 🛡️⎠ "}) 
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {quoted: message.data}, {caption: "🎭🇱🇰𝙰𝙻𝙿𝙷𝙰🇱🇰🎭  "}) 
         }
           })
           .catch(
@@ -695,7 +567,7 @@ else if (config.WORKTYPE == 'public') {
       if (msg === '200') {
         await message.client.sendMessage(message.jid,Lang.DL_VID,MessageType.text, {quoted: message.data});
         await message.client.sendMessage(message.jid,Lang.UP_VID,MessageType.text, {quoted: message.data});
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "⎝🛡️ ALPHA 🛡️⎠ "}) 
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {caption: "🎭🇱🇰𝙰𝙻𝙿𝙷𝙰🇱🇰🎭 "}) 
         }
           })
           .catch(
@@ -828,7 +700,7 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '🍁 *' + video.title + '* - ' + video.url + '\n\n'
+            mesaj += '🎭 *' + video.title + '* - ' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text, {quoted: message.data});
@@ -853,7 +725,7 @@ else if (config.WORKTYPE == 'public') {
         await reply.delete();
     }));
 
-    Trex.addrex({pattern: 'img ?(.*)', fromMe: false, desc: '❤'}, (async (message, match) => { 
+    Trex.addrex({pattern: 'img ?(.*)', fromMe: false, desc: '🎭'}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
