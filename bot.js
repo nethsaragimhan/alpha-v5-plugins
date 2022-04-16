@@ -125,7 +125,7 @@ ${chalk.blue.italic('🎭🇱🇰 Connecting to WhatsApp...▶')}`);
         });
         
         console.log(
-            chalk.blueBright.italic('🎭🇱🇰 Installing plugins... \n\n 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WHATSAPP BOT WORKING!▷ \n\n 🎭🇱🇰 𝙰𝙻𝙿𝙷𝙰 🇱🇰🎭 WhatsApp User Bot v5.0.0 \n\n')
+            chalk.blueBright.italic('🎭🇱🇰 Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
