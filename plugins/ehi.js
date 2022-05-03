@@ -40,7 +40,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/YouTube%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
-        await message.client.sendMessage (message.jid, Buffer.from (document.data), MessageType.document, { filename : 'Any⚽YouTube♻️SUCCESS♻️.ehi' , mimetype: 'application/octet-stream' ,quoted: message.data})
+        await message.client.sendMessage (message.jid, Buffer.from (document.data), MessageType.document, { filename : 'AnyYouTube♻️SUCCESS♻️.ehi' , mimetype: 'application/octet-stream' ,quoted: message.data})
 
    }));        
 
