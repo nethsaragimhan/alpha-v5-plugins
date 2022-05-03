@@ -12,7 +12,7 @@ const axios = require('axios');
 
      
 
-               Alpha.addrex({pattern: 'wehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'wehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Whatsapp%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -20,7 +20,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-                           Alpha.addrex({pattern: 'fehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+                           Alpha.addrex({pattern: 'fehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/YouTube%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -28,7 +28,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
      }));   
 
-        Alpha.addrex({pattern: 'zehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'zehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Zoom%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -36,7 +36,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
    }));     
 
-        Alpha.addrex({pattern: 'yehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'yehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/YouTube%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -44,7 +44,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
    }));        
 
-        Alpha.addrex({pattern: 'dzehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'dzehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/D-Zoom%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -52,7 +52,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-        Alpha.addrex({pattern: 'nfehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'nfehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/NetFix%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -60,7 +60,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-               Alpha.addrex({pattern: 'iehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'iehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/IMO%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -69,7 +69,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
         }));
 
 
-               Alpha.addrex({pattern: 'm0ehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'm0ehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Moditel%200%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -78,7 +78,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
         }));
 
 
-               Alpha.addrex({pattern: 'h0ehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'h0ehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Hutch%200%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -86,7 +86,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-               Alpha.addrex({pattern: 'd0ehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'd0ehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Dialog%200%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -94,7 +94,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-               Alpha.addrex({pattern: 'a0ehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'a0ehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Aritel%200%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
@@ -104,7 +104,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
 
 
-  Alpha.addrex({pattern: 'allehi', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+  Alpha.addrex({pattern: 'allehi', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Whatsapp%E2%99%BB%EF%B8%8FSUCCESS%E2%99%BB%EF%B8%8F.ehi?raw=true', {responseType: 'arraybuffer'})
 
