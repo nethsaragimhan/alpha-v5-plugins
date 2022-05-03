@@ -45,7 +45,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
    }));        
 
 
-  Alpha.addrex({pattern: 'ehiapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+  Alpha.addrex({pattern: 'allehiapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/HTTP%20Injector%20lite.apk?raw=true', {responseType: 'arraybuffer'})
 
