@@ -12,7 +12,7 @@ const axios = require('axios');
 
      
 
-               Alpha.addrex({pattern: 'httplapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+               Alpha.addrex({pattern: 'httplapk', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/HTTP%20Injector%20lite.apk?raw=true', {responseType: 'arraybuffer'})
 
@@ -20,7 +20,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
         }));
 
-                           Alpha.addrex({pattern: 'httpapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+                           Alpha.addrex({pattern: 'httpapk', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/HTTP%20Injector.apk?raw=true', {responseType: 'arraybuffer'})
 
@@ -28,7 +28,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
      }));   
 
-        Alpha.addrex({pattern: 'tlsapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'tlsapk', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/TLS%20Tunnel%20.apk?raw=true', {responseType: 'arraybuffer'})
 
@@ -36,7 +36,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
 
    }));     
 
-        Alpha.addrex({pattern: 'sksapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+        Alpha.addrex({pattern: 'sksapk', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/Socks%20HTTP.apk?raw=true', {responseType: 'arraybuffer'})
 
@@ -45,7 +45,7 @@ var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main
    }));        
 
 
-  Alpha.addrex({pattern: 'allehiapk', fromMe: false,dontaddrexList:true}, (async (message, match) => {
+  Alpha.addrex({pattern: 'allehiapk', fromMe: true,dontaddrexList:true}, (async (message, match) => {
 
 var document = await axios.get ('https://github.com/Dark-Max-Alpha/ehi/blob/main/HTTP%20Injector%20lite.apk?raw=true', {responseType: 'arraybuffer'})
 
