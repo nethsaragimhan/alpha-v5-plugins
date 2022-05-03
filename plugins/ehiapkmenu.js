@@ -20,7 +20,7 @@ var ddd = ggg.toString('utf-8')
 
 let whb = Config.WORKTYPE == 'public' ? false : true
 
-Alpha.addrex({pattern: 'ehiapk', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
+Alpha.addrex({pattern: 'eapk', fromMe: whb, dontAddCommandList: true}, (async (message, match) => {
 
 // send a buttons message!
 
