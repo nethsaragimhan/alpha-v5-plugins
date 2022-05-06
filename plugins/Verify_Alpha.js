@@ -3,7 +3,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
 
-Trex.addrex({pattern: 'check', fromMe: false, deleteCommand: true, desc: 'verify 👿',}, (async (message, match) => {
+Trex.addrex({pattern: 'check', fromMe: true, deleteCommand: true, desc: 'verify 👿',}, (async (message, match) => {
 
     var r_text = new Array ();
 
